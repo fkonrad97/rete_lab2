@@ -1,0 +1,107 @@
+!SESSION 2021-03-11 12:54:19.031 -----------------------------------------------
+eclipse.buildId=3.5.2.201902261438
+java.version=11.0.6
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.equinox.app 0 0 2021-03-11 12:54:29.091
+!MESSAGE Product com.yakindu.sct.products.product could not be found.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-11 13:06:57.631
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-11 13:06:57.789
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-11 13:06:57.791
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2021-03-11 16:10:59.382 -----------------------------------------------
+eclipse.buildId=3.5.2.201902261438
+java.version=11.0.6
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.equinox.app 0 0 2021-03-11 16:11:10.721
+!MESSAGE Product com.yakindu.sct.products.product could not be found.
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-03-11 16:11:27.472
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2021-03-11 16:17:09.575 -----------------------------------------------
+eclipse.buildId=3.5.2.201902261438
+java.version=11.0.6
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.equinox.app 0 0 2021-03-11 16:17:14.483
+!MESSAGE Product com.yakindu.sct.products.product could not be found.
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-03-11 16:17:17.357
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-11 16:18:27.122
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-11 16:18:27.128
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-11 16:18:27.129
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.jface 2 0 2021-03-11 17:10:42.539
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-03-11 17:10:42.539
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2b94a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12a4603e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12a4603e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.xtext.ui.embeddedTextEditorScope,,,system)
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:02:58.797
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:05:16.162
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:06:04.360
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:11:37.189
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:11:58.073
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:14:50.348
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:15:04.750
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:15:22.531
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2021-03-11 18:25:44.965
+!MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
