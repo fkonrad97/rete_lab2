@@ -3,6 +3,7 @@ package hu.bme.mit.yakindu.analysis.workhere;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 import hu.bme.mit.yakindu.analysis.RuntimeService;
 import hu.bme.mit.yakindu.analysis.TimerService;
@@ -14,7 +15,6 @@ import hu.bme.mit.yakindu.analysis.example.IExampleStatemachine;
 
 
 public class RunStatechart {
-	
 	public static void main(String[] args) throws IOException {
 		ExampleStatemachine s = new ExampleStatemachine();
 		s.setTimer(new TimerService());

@@ -1,0 +1,16 @@
+package hu.bme.mit.yakindu.analysis.workhere;
+
+import hu.bme.mit.yakindu.analysis.modelmanager.ModelManager;
+import org.eclipse.emf.ecore.EObject;
+
+public class BigModelMain {
+	public static void Main() {
+		ModelManager manager = new ModelManager();
+		EObject root = manager.loadModel("model_input/example.sct");
+		Statechart s = (Statechart) root;
+		
+		//Task4_3(s);
+		//Task4_4(s);
+		new Generator(s).Generate().PrintOut();
+	}
+}

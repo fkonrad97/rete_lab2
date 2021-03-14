@@ -1,0 +1,107 @@
+package hu.bme.mit.yakindu.analysis.workhere;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.yakindu.base.types.Direction;
+import org.yakindu.sct.model.sgraph.Statechart;
+import org.yakindu.sct.model.stext.stext.EventDefinition;
+import org.yakindu.sct.model.stext.stext.VariableDefinition;
+
+import hu.bme.mit.yakindu.analysis.RuntimeService;
+import hu.bme.mit.yakindu.analysis.TimerService;
+import hu.bme.mit.yakindu.analysis.example.ExampleStatemachine;
+import hu.bme.mit.yakindu.analysis.example.IExampleStatemachine;
+
+public class Task4_5 {
+	
+	private Statechart s;
+	private ArrayList<String> lines = new ArrayList<String>();
+	
+	public Task4_5 (Statechart s) {
+		this.s = s;
+	}
+	
+	public Task4_5 Generate() {
+		lines.add("public class RunStatechart {");
+		addMain();
+		lines.add("");		
+		
+		addParser();
+		lines.add("");
+		
+		addPrinter();		
+		lines.add("");
+		
+		lines.add("");
+		lines.add("}"); //closing } for class
+		return this;
+	}
+	
+	public void PrintOut() {
+		for (String l: lines)
+			System.out.println(l);
+	}
+	
+	private void addMain() {		
+		lines.add("    public static void main(String[] args) throws IOException {");
+		lines.add("        ExampleStatemachine s = new ExampleStatemachine();");
+		lines.add("        s.setTimer(new TimerService());");
+		lines.add("        RuntimeService.getInstance().registerStatemachine(s, 200);");
+		lines.add("        s.init();");
+		lines.add("        s.enter();");
+		lines.add("        s.runCycle();");
+		lines.add("        print(s);");
+		lines.add("        Scanner sc = new Scanner(System.in);");
+		lines.add("        while (true) Parse(s, sc.nextLine());");
+		lines.add("    }");
+	}
+	
+	private void addParser() {
+		lines.add("    public static void Parse(ExampleStatemachine sm, String s) {");
+		lines.add("        print(sm);");		
+		lines.add("        switch (s) {");
+		
+		TreeIterator<EObject> iterator = s.eAllContents();
+		while (iterator.hasNext()) {
+			EObject content = iterator.next();
+			if(content instanceof EventDefinition) {
+				EventDefinition b = (EventDefinition) content;
+				if (b.getDirection() == Direction.IN) {
+					lines.add("        case \""+ b.getName() +"\":");
+					lines.add("            sm.raise"+ cf(b.getName()) +"();");
+					lines.add("            sm.runCycle();");
+					lines.add("            break;");
+				}
+			}
+		}
+		
+		lines.add("        case \"exit\":\n" + 
+				"            System.exit(0);");
+		
+		lines.add("        }");		
+		lines.add("    }");
+	}
+	
+	private void addPrinter() {
+		TreeIterator<EObject> iterator = s.eAllContents();
+		lines.add("    public static void print(IExampleStatemachine s) {");
+
+		while (iterator.hasNext()) {
+			EObject content = iterator.next();
+			if(content instanceof VariableDefinition) {
+				VariableDefinition b = (VariableDefinition) content;
+				lines.add("        System.out.println(\""+cf(b.getName()).charAt(0)+" = \" + s.getSCInterface().get"+cf(b.getName())+"());");
+			}
+		}
+		
+		lines.add("    }");
+	}	
+	
+	private static String cf(String s) {
+		return s.substring(0,1).toUpperCase() + s.substring(1);
+	}
+}
