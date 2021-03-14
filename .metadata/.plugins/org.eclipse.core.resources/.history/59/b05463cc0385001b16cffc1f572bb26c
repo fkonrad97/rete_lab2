@@ -2,6 +2,8 @@ package hu.bme.mit.yakindu.analysis.workhere;
 
 import java.util.ArrayList;
 
+import org.yakindu.sct.model.sgraph.Statechart;
+
 public class Task4_5 {
 	private ArrayList<String> lines = new ArrayList<String>();
 	
